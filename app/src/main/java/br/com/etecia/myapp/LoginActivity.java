@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         });
         btnEntrar = findViewById(R.id.btnEntrar);
 
-
+        btnEntrar.setOnClickListener()
 
         }
     }
