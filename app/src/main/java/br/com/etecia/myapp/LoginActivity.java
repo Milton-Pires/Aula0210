@@ -1,7 +1,10 @@
 package br.com.etecia.myapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +12,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class LoginActivity extends AppCompatActivity {
     Button btnEntrar;
+    TextInputEditText txtEmail, txtSenha;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +29,26 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
         btnEntrar = findViewById(R.id.btnEntrar);
+        txtEmail = findViewById(R.id.txtEmail);
+        txtSenha = findViewById(R.id.txtSenha);
 
-        btnEntrar.setOnClickListener()
+        txtEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email, senha;
+                email = txtEmail.getText().toString();
+                senha = txtSenha.getText().toString();
+                if(email.equals("etecia") && senha.equals("etecia")){
+                    startActivity(new Intent(getApplicationContext(), MenuPrincipalActivity.class));
+                    finish();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Usuario ou senha invalidos", Toast.LENGTH_SHORT);
+                }
+            }
+        });
 
-        }
+
+
     }
 }

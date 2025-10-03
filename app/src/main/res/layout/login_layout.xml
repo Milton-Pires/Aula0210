@@ -16,7 +16,7 @@
         android:src="@drawable/hat_chef_icon" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtEmail"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Insira seu email"
@@ -24,6 +24,7 @@
         app:startIconDrawable="@drawable/baseline_email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -33,7 +34,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtSenha"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -43,6 +44,7 @@
         app:startIconDrawable="@drawable/baseline_lock">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textWebPassword">
@@ -55,7 +57,10 @@
             android:id="@+id/btnEntrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Entrar" />
+            android:text="Entrar"
+            android:backgroundTint="#00F4F4F4"
+            android:textColor="#000"
+            />
 
         <Button
             android:layout_width="match_parent"
